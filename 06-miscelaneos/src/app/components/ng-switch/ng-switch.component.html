@@ -1,0 +1,19 @@
+<br>
+<h2>5. ngSwitch</h2>
+
+<button (click)="changeAlert()" type="button" class="btn btn-secondary">Cambiar alerta: <span> {{alert | uppercase}} </span></button>
+
+<div class="mt-2" [ngSwitch]="alert">
+    <div *ngSwitchCase="'success'" class="alert alert-success" role="alert">
+        A simple success alert—check it out!
+    </div>
+    <div *ngSwitchCase="'danger'" class="alert alert-danger" role="alert">
+        A simple danger alert—check it out!
+    </div>
+    <div *ngSwitchCase="'warning'" class="alert alert-warning" role="alert">
+        A simple warning alert—check it out!
+    </div>
+    <div *ngSwitchDefault class="alert alert-info" role="alert">
+        A simple info alert—check it out!
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <table class="table">
+                <thead class="thead-light">
+                    <th>Name</th>
+                    <th>Capital</th>
+                    <th>Area</th>
+                    <th>Population</th>
+                    <th>Native name</th>
+                </thead>
+
+                <tbody>
+                    <tr *ngFor="let country of countriesList">
+                        <td style="color: white;"> {{country.name}} </td>
+                        <td style="color: white;"> {{country.capital}} </td>
+                        <td style="color: white;"> {{country.area | number }} km² </td>
+                        <td style="color: white;"> {{country.population | number}} </td>
+                        <td style="color: white;"> {{country.nativeName}} </td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+</div>

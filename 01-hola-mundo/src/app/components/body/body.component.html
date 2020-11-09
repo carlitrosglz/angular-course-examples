@@ -1,0 +1,32 @@
+<div class="row">
+
+    <div class="col">
+        <h1>*ngIf</h1>
+        <hr>
+
+        <!-- Bloque de código de Bootstrap. Similar a un CardView de Android -->
+        <div *ngIf="isVisible" class="card text-white bg-primary mb-3" style="max-width: 100%;">
+            <div class="card-body">
+                <h5 class="card-title">{{ text.author}}</h5>
+                <p class="card-text">{{ text.message }}</p>
+            </div>
+        </div>
+
+        <button (click)="showMessage()" class="btn btn-outline-primary btn-block">
+            Mostrar / Ocultar
+        </button>
+    </div>
+
+    <div class="col">
+        <h1>*ngFor</h1>
+        <hr>
+
+        <!-- Bloque de código de Bootstrap. Lista ordenada -->
+        <ul class="list-group">
+            <li *ngFor="let hero of characters; let i = index" class="list-group-item">
+                {{ i+1 }}. {{ hero }}
+            </li>
+        </ul>
+    </div>
+
+</div>

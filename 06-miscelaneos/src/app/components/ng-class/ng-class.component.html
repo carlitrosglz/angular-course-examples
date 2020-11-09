@@ -1,0 +1,25 @@
+<h2>3. NgClass - ng-class.component.ts</h2>
+
+<!-- la class de este div la determina la variable alertType de TS. Se va cambiando a través de los dos botones inferiores -->
+<div [ngClass]="alertType" class="alert" role="alert">{{message}}</div>
+
+<button class="btn btn-info" type="button" (click)="changeToInfoAlert()">Info</button>
+<button class="btn btn-success" type="button" (click)="changeToSuccessAlert()">Success</button>
+
+<br><br>
+
+<h3 [ngClass]=" {'text-danger': properties.danger, 'text-info': !properties.danger} ">La clase de este texto la determina una propiedad de un objeto (properties.danger).<br><small>El botón inferior cambia la propiedad DANGER de true a false.<br>La class de ese botón también depende del objeto mencionado anteriormente. </small></h3>
+
+<button type="button" class="btn" name="button" (click)="properties.danger = !properties.danger" [ngClass]=" {'btn-danger': properties.danger, 'btn-info': !properties.danger} ">Cambiar</button>
+
+<!-- ---------------------------------------------------------------  -->
+
+<br><br>
+
+<h3>3.1 Proceso asíncrono</h3>
+
+<button [disabled]="loading" (click)="execute()" class="mb-5 btn btn-primary" name="button" type="button">
+    <i [ngClass]=" { 'fa-save': !loading, 'fa-refresh fa-spin': loading} " class="fa"></i>
+    <span class="ml-2" *ngIf="!loading">Guardar cambios</span>
+    <span class="ml-2" *ngIf="loading">Espere por favor</span>
+</button>

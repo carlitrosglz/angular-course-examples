@@ -1,0 +1,192 @@
+<h1 class="mt-3">Pipes <small>Angular</small></h1>
+<hr>
+
+<div class="row">
+    <div class="col">
+
+        <table class="table">
+
+            <thead class="thead-dark">
+                <tr>
+                    <th>Variable</th>
+                    <th>Pipe</th>
+                    <th>Salida</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>{{ name }}</td>
+                    <td>capitalize:true</td>
+                    <td>{{ name | capitalize:true }}</td>
+                </tr>
+
+                <tr>
+                    <td>{{ name }}</td>
+                    <td>uppercase</td>
+                    <td>{{ name | uppercase }}</td>
+                </tr>
+
+                <tr>
+                    <td>{{ name }}</td>
+                    <td>lowercase</td>
+                    <td>{{ name | lowercase }}</td>
+                </tr>
+
+                <tr>
+                    <td>{{ name }}</td>
+                    <!-- corta las primeras 3 posiciones de NAME -->
+                    <td>slice:3</td>
+                    <td>{{ name | slice:3 }}</td>
+                </tr>
+
+                <tr>
+                    <td>{{ name }}</td>
+                    <!-- corta desde la posicion 0 (incluida) hasta la 3 (no incluida) -->
+                    <td>slice:0:3</td>
+                    <td>{{ name | slice:0:3 }}</td>
+                </tr>
+
+                <tr>
+                    <td>{{ array }}</td>
+                    <td>slice:1:5</td>
+                    <td>{{ array | slice:1:5 }}</td>
+                </tr>
+
+                <tr>
+                    <td>{{ PI }}</td>
+                    <td>number</td>
+                    <td>{{ PI | number }}</td>
+                </tr>
+
+                <tr>
+                    <td>{{ PI }}</td>
+                    <td>number:'3.0-0'</td>
+                    <td>{{ PI | number:'3.0-0' }}</td>
+                </tr>
+
+                <tr>
+                    <td>{{ PI }}</td>
+                    <td>number:'.0-2'</td>
+                    <td>{{ PI | number:'.0-2'}}</td>
+                </tr>
+
+                <tr>
+                    <td>{{ percent }}</td>
+                    <td>percent</td>
+                    <td>{{ percent | percent }}</td>
+                </tr>
+
+                <tr>
+                    <td>{{ percent }}</td>
+                    <td>percent:'2.2-2'</td>
+                    <td>{{ percent | percent:'2.2-2' }}</td>
+                </tr>
+
+                <tr>
+                    <td>{{ salary }}</td>
+                    <td>currency</td>
+                    <td>{{ salary | currency }}</td>
+                </tr>
+
+                <tr>
+                    <td>{{ salary }}</td>
+                    <td>currency:'EUR'</td>
+                    <td>{{ salary | currency:'EUR' }}</td>
+                </tr>
+
+                <tr>
+                    <td>{{ salary }}</td>
+                    <td>currency:'CAD':'symbol-narrow':'.0-0'</td>
+                    <td>{{ salary | currency:'CAD':'symbol-narrow':'.0-0' }}</td>
+                </tr>
+
+                <tr>
+                    <td>{{ myPromise }}</td>
+                    <td>async</td>
+                    <td>{{ myPromise | async }}</td>
+                </tr>
+
+                <tr>
+                    <td>{{ date }}</td>
+                    <td>date</td>
+                    <td>{{ date | date }}</td>
+                </tr>
+
+                <tr>
+                    <td>{{ date }}</td>
+                    <td>date:'medium'</td>
+                    <td>{{ date | date:'medium' }}</td>
+                </tr>
+
+                <tr>
+                    <td>{{ date }}</td>
+                    <td>date:'short'</td>
+                    <td>{{ date | date:'short' }}</td>
+                </tr>
+
+                <tr>
+                    <td>{{ date }}</td>
+                    <td>date:'MMMM - dd'</td>
+                    <td>{{ date | date:'MMMM - dd' }}</td>
+                </tr>
+
+                <tr>
+                    <td>{{ date }}</td>
+                    <td>date:'MMMM - dd':'':'fr'</td>
+                    <td>{{ date | date:'MMMM - dd':'':'fr' }}</td>
+                </tr>
+
+                <tr>
+                    <td>{{ date }}</td>
+                    <td>
+                        date:'MMMM - dd':'':{{idioma}}
+                        <br>
+                        <button (click)="idioma = 'es'" class="mr-1 btn btn-primary">Español</button>
+                        <button (click)="idioma = 'en'" class="mr-1 btn btn-secondary">Inglés</button>
+                        <button (click)="idioma = 'fr'" class="mr-1 btn btn-success">Francés</button>
+                    </td>
+                    <td>{{ date | date:'MMMM - dd':'':idioma }}</td>
+                </tr>
+
+                <tr>
+                    <td>{{ name }}</td>
+                    <td>
+                        password:{{ activate }}
+                        <br>
+                        <button (click)="activate = !activate" class="btn btn-outline-primary">Activar / Desactivar</button>
+                    </td>
+                    <td>{{ name | password:activate }}</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+        <h4>Slice:5:20 de array[1,2,3,4,5,6,7,8,9,10]. NO DA ERROR!</h4>
+        <ul>
+            <li *ngFor="let item of array | slice:5:20"> {{ item }} </li>
+        </ul>
+
+        <hr>
+
+        <h3>JSON (puede fallar si hay funciones)</h3>
+        <div class="row mb-5">
+            <div class="col">
+                <pre>
+                {{ hero | json }}
+              </pre>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<h3>Domseguro</h3>
+<hr>
+
+<div class="row">
+    <div class="col mb-5">
+        <iframe width="560" height="315" [src]="videoUrl | domseguro" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</div>

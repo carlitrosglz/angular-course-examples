@@ -1,0 +1,23 @@
+<ion-list color="dark">
+
+    <ion-item-sliding *ngFor="let item of deseosService.getListas() | filtro:terminada">
+        <ion-item (click)="listaSeleccionada(item)" color="dark" detail>
+            <ion-label>{{item.title }}</ion-label>
+            <ion-note slot="end" color="tertiary">{{ item.items.length }} items</ion-note>
+        </ion-item>
+
+        <ion-item-options side="end">
+            <ion-item-option color="danger" (click)="borrarLista(item)">
+                <ion-icon slot="icon-only" name="close"></ion-icon>
+            </ion-item-option>
+        </ion-item-options>
+
+        <ion-item-options side="start">
+            <ion-item-option color="primary" (click)="editListName(item)">
+                <ion-icon slot="icon-only" name="create"></ion-icon>
+            </ion-item-option>
+        </ion-item-options>
+
+    </ion-item-sliding>
+
+</ion-list>
