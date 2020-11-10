@@ -1,8 +1,14 @@
-# LoginApp
+## **07-login-app**
+---
+Ampliación del proyecto anterior. En este caso, autenticamos contra Firebase.
 
-Cascaron de un login que usaremos en la sección 10 de mi curso de Angular de cero a experto.
+1. Validación de formularios
+2. Firebase REST API
+3. Registro y login de usuarios
+4. Tokens de acceso
+5. Bloqueo de rutas a usuarios no logueados
+    * AuthGuard
+6. Animaciones CSS
+    * animate.css
 
-https://www.udemy.com/angular-2-fernando-herrera/?couponCode=ANGULAR-10
-
-
-![](https://github.com/Klerith/angular-login-demoapp/blob/master/src/assets/images/demo.png?raw=true)
+![Aplicación #7](./loginFirebase.png)
