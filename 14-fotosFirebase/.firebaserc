@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "backend-login-app": {
+      "hosting": {
+        "fotosFirebase": [
+          "backend-login-app"
+        ]
+      }
+    }
+  }
+}
