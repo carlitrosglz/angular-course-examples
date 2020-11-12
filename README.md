@@ -200,3 +200,17 @@ Implementación de gráficos con las librerías:
 * <code>[ng2-charts](https://valor-software.com/ng2-charts/)</code>
 
 ![Aplicación #15](./15-graphs/charts.png)
+
+## **16-virtual-scroll-drag-drop**
+---
+Implementación de nuevas funcionalidades de la versión 7 de Angular:
+* Angular CDK (Component Development Kit) --> Angular Material
+* Virtual scroll
+* Drag and drop
+
+Instalar el siguiente paquete:
+<pre>npm install @angular/cdk</pre>
+
+El concepto es similar al de los RecyclerView de Android: renderiza dinámicamente **SOLO** lo que esté dentro del viewport más un offset.
+
+![Aplicación #16](./16-virtual-scroll-drag-drop/virtual-scroll-drag-drop.png)

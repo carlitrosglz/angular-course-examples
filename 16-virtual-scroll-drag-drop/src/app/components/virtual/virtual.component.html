@@ -1,0 +1,28 @@
+<h1>Virtual Scroll</h1>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <button (click)="irInicio()" class="btn btn-primary">Ir al inicio</button>
+        <hr>
+    </div>
+
+    <div class="col text-center">
+        <button (click)="irMitad()" class="btn btn-warning text-white">Ir a la mitad</button>
+        <hr>
+    </div>
+
+    <div class="col text-right">
+        <button (click)="irFinal()" class="btn btn-secondary">Ir al final</button>
+        <hr>
+    </div>
+</div>
+
+<!-- recyclerView de Android. El attr itemSize y height son obligatorios, por defecto tienen un valor=0 -->
+<cdk-virtual-scroll-viewport class="list-container list-group" itemSize="50">
+
+    <div class="list-group-item" *cdkVirtualFor="let persona of personas; let i = index; let cuenta = count;">
+        Item {{ i }} / {{ cuenta }}
+    </div>
+
+</cdk-virtual-scroll-viewport>
