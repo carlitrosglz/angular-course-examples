@@ -237,3 +237,8 @@ Desarrollo desde **CERO** hasta la puesta en **PRODUCCIÓN** de una web-app.  Se
 ![#Aplicación17](./17-goty/inicio.png)
 
 ![#Aplicación17](./17-goty/vote.png)
+
+## **17-goty-backend-v2**
+---
+Backend utilizado para el proyecto 17. Realizado utilizando NodeJS y Express.  
+Desplegado en Heroku para escuchar peticiones GET y POST.

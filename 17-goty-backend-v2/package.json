@@ -1,0 +1,26 @@
+{
+    "name": "17-goty-backend-v2",
+    "version": "1.0.0",
+    "description": "Express backend for GOTY web-app.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "heroku"
+    ],
+    "author": "Carlos Gonzalez",
+    "license": "MIT",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "firebase-admin": "^9.4.0"
+    },
+    "devDependencies": {
+        "@types/cors": "^2.8.8",
+        "@types/express": "^4.17.9"
+    },
+    "engines": {
+        "node": "10.x"
+    }
+}
